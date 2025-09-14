@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { fetchTickets } from './api';
 import TicketsTable from './components/TicketsTable';
 import NewTicket from './components/NewTicket';
+import ConnectionStatus from './components/ConnectionStatus';
 import './styles/App.css';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
   return (
     <div className="container">
       <h1>Atlan Helpdesk Demo</h1>
+      <ConnectionStatus />
       <div className="filter-section">
         <div className="filter-row">
           <span className="filter-icon">🔍</span>

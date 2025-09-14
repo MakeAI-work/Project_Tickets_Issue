@@ -4,10 +4,17 @@ from fastapi.middleware.cors import CORSMiddleware
 from .api.tickets import router as tickets_router
 
 app = FastAPI(title="Atlan Helpdesk AI")
+# Configure CORS for production deployment
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_methods=["*"],
+    allow_origins=[
+        "http://localhost:3000",  # Local development
+        "https://*.onrender.com",  # Render deployments
+        "https://*.netlify.app",   # Netlify deployments
+        "https://*.vercel.app",    # Vercel deployments
+    ],
+    allow_credentials=True,
+    allow_methods=["GET", "POST", "PUT", "DELETE"],
     allow_headers=["*"],
 )
 
@@ -16,4 +23,12 @@ app.include_router(tickets_router)
 
 @app.get("/")
 async def root():
-    return {"status": "ok"}
+    return {"status": "ok", "message": "Atlan Helpdesk AI API"}
+
+@app.get("/health")
+async def health_check():
+    return {
+        "status": "healthy",
+        "service": "atlan-helpdesk-api",
+        "version": "1.0.0"
+    }
