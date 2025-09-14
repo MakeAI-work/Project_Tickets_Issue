@@ -211,47 +211,9 @@ npm test
 3. Check RAG responses for relevance
 4. Test filtering and dashboard functionality
 
-## 📊 Performance Considerations
 
 ### Optimization Strategies
 - **Caching**: Vector stores are cached with `@lru_cache`
 - **Chunking**: Documents split into 800-character chunks
 - **Retrieval**: Limited to top-3 most relevant chunks
 - **Model**: Using cost-effective GPT-4o-mini
-
-### Scaling Recommendations
-- **Horizontal Scaling**: Deploy multiple backend instances
-- **Database Optimization**: Use local DeepLake for faster access
-- **CDN**: Serve static frontend assets via CDN
-- **Monitoring**: Implement logging and metrics collection
-
-## 🔒 Security Notes
-
-- Store API keys in environment variables
-- Use HTTPS in production
-- Implement rate limiting for API endpoints
-- Validate and sanitize user inputs
-- Regular security audits of dependencies
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests for new functionality
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🆘 Support
-
-For issues and questions:
-1. Check the GitHub Issues page
-2. Review the API documentation at `/docs`
-3. Contact the development team
-
----
-
-Built with ❤️ for Atlan's AI-powered support ecosystem.

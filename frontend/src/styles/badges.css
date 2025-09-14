@@ -1,0 +1,10 @@
+/* Table & badge overrides */
+.container { max-width: 960px; margin: auto; font-family: sans-serif; }
+
+.tickets-table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+.tickets-table th, .tickets-table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+/* .tickets-table th { background: #f5f5f5; } */
+
+.P0 { background: #d32f2f; color: #fff; font-weight: bold; padding: 2px 6px; border-radius: 4px; }
+.P1 { background: #f9a825; color: #fff; padding: 2px 6px; border-radius: 4px; }
+.P2 { background: #388e3c; color: #fff; padding: 2px 6px; border-radius: 4px; }
