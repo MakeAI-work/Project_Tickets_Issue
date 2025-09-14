@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:8000";
+const API_BASE_URL = process.env.REACT_APP_API_URL || "https://atlan-helpdesk-api.onrender.com" || "http://localhost:8000";
 
 // Log API URL for debugging
 console.log('API Base URL:', API_BASE_URL);

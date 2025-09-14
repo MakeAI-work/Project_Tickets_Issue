@@ -9,9 +9,11 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",  # Local development
-        "https://*.onrender.com",  # Render deployments
+        "https://atlan-helpdesk-frontend.onrender.com",  # Your frontend URL
+        "https://*.onrender.com",  # Other Render deployments
         "https://*.netlify.app",   # Netlify deployments
         "https://*.vercel.app",    # Vercel deployments
+        "http://localhost:8000",
     ],
     allow_credentials=True,
     allow_methods=["GET", "POST", "PUT", "DELETE"],
