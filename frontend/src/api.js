@@ -60,14 +60,5 @@ export const classifyAnswer = async (text) => {
   }
 };
 
-// Health check function
-export const healthCheck = async () => {
-  try {
-    return await api.get("/health");
-  } catch (error) {
-    console.error('Health check failed:', error);
-    throw error;
-  }
-};
 
 export default api;
